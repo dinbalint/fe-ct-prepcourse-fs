@@ -30,11 +30,17 @@ function sumarArray(arrayOfNumbers, cb) {
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
 
-   var suma = 0
-   for (var i =0; i< arrayOfNumbers.length; i++) {
-      suma  = suma + arrayOfNumbers[i] 
-   }
-   cb(suma) ;
+   // var suma = 0
+   // for (var i =0; i< arrayOfNumbers.length; i++) {
+   //    suma  = suma + arrayOfNumbers[i] 
+   // }
+   // cb(suma) ;
+   var initialValue = 0;
+   var sumWithInitial = arrayOfNumbers.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue} , initialValue);
+
+     cb(sumWithInitial);
+   
 }
 
 function forEach(array, cb) {
